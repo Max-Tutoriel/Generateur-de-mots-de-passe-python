@@ -9,7 +9,7 @@ def ExitOnError():
 def CheckFiles(file):
 	characterFile = Path(file)
 	if characterFile.is_file() == False:
-		print ("Fatal error : Le fichier \"caracteres.txt\" est introuvable !")
+		print ("Fatal error : Le fichier \"character.txt\" est introuvable !")
 		ExitOnError()
 
 def LoadCharacters(file):
@@ -49,8 +49,8 @@ def WritePasswordIntoFile(file, text):
 	with open(file, 'a') as textWriter:
 		textWriter.write("\n" + text)
 
-CheckFiles("caracteres.txt")
-characters = LoadCharacters("caracteres.txt")
+CheckFiles("character.txt")
+characters = LoadCharacters("character.txt")
 print ("Vos mots de passe seront créés aléatoirement en utilisant ces caractères :\n" + characters)
 print("-------------------------")
 
